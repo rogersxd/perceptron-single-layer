@@ -1,0 +1,34 @@
+<html>
+
+<body>
+
+</body>
+
+<script src="./matrix.js"></script>
+<script src="./neuralNetwork.js"></script>
+<script>
+let perceptron = NeuralNetwork.perceptron()
+//Carboidrato, Cálcio, Fósforo, Ferro, Potássio
+const banana = [23.07, 5, 22, 0.26, 362];
+const laranja = [15, 52, 18, 0.1, 0.1]; 
+const bergamota = [11.74, 33, 18, 0.13, 146];
+
+for (let i = 0; i < 10; i++) {
+    perceptron.train([15, 52, 18, 0.1, 0.1], 1);
+
+    perceptron.train([randomNumber(), randomNumber(), randomNumber(), randomNumber(), randomNumber()], 0)
+}
+
+if (perceptron.predict(banana)) {
+    console.log('É uma Laranja');
+} else {
+    console.log('Não é uma laranja');
+}
+
+function randomNumber() {
+    return Math.abs(Math.floor(Math.random() * (1 - 100)));
+}
+
+</script>
+
+</html>
